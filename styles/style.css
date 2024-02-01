@@ -1,0 +1,71 @@
+/* dee5e5 - platinum
+090b0b - night
+#BB2D3B - saar red */
+*{
+margin: auto;
+font-family: 'Urbanist', sans-serif;
+}
+
+body{
+    background-color: #dee5e5;
+}
+
+#logo{
+    padding: 20px;
+    padding-left: 40px;
+    position: fixed;
+}
+.navbar{
+    background-color: #dee5e5;
+    overflow: hidden;
+    display: flex;
+}
+
+.navlinks{
+    margin-right: 40px;
+    display: flex;
+}
+
+.navlinks a{
+    float: left;
+    color:#090b0b;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+.dropdown{
+    overflow: hidden;
+}
+
+.dropdown .dropbtn{
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #090909;
+    background: inherit;
+    margin: 0;
+    padding: 14px 16px;
+}
+
+.navlinks a:hover, .dropdown:hover .dropbtn{
+    border-bottom-color:#BB2D3B;
+    border-bottom-style: solid;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #F4F6F6;
+    min-width: 160px;
+}
+
+.dropdown-content a:hover{
+    border-bottom-color:#BB2D3B;
+    border-bottom-style: solid;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
