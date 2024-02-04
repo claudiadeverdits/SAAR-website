@@ -89,8 +89,16 @@ body{
     text-align:center;
 }
 
-#title{
-    font-size: 7vw;
+.title h1{
+    font-size: 4vw;
+}
+
+.title p{
+    font-size: 2vw;
+    padding: 10px;
+}
+
+.title{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -98,5 +106,7 @@ body{
     padding: 10px;
     /* border-color: #BB2D3B;
     border-style:solid; */
-    background-color: rgba(187,45,59,0.6);
+    background-color: rgba(187,45,59,0.8);
+    color: white;
+    width:80%;
 }
