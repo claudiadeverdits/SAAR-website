@@ -72,6 +72,7 @@ body{
     position: absolute;
     background-color: #F4F6F6;
     min-width: 160px;
+    z-index: 1;
 }
 
 .dropdown-content a:hover{
@@ -81,4 +82,21 @@ body{
 
 .dropdown:hover .dropdown-content{
     display: block;
+}
+
+.title-screen{
+    position: relative;
+    text-align:center;
+}
+
+#title{
+    font-size: 7vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    /* border-color: #BB2D3B;
+    border-style:solid; */
+    background-color: rgba(187,45,59,0.6);
 }
