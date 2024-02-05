@@ -21,17 +21,16 @@ body{
 }
 
 .navbar{
-    background-color: #dee5e5;
-    overflow: hidden;
+    display: flex;
 }
 
 .navlinks{
-    margin-right: 40px;
-    display: flex;
+    overflow: hidden;
 }
 
 .navlinks a{
     float: left;
+    display: block;
     color:#090b0b;
     font-size: 20px;
     text-decoration: none;
@@ -41,12 +40,17 @@ body{
     border-bottom-style: solid;
 }
 
+.navlinks .icon {
+    display: none;
+}
+
 .navlinks .dropdown-content a{
     border-bottom-color:#F4F6F6;
     border-bottom-style: solid;
 }
 
 .dropdown{
+    float: left;
     overflow: hidden;
 }
 
@@ -55,7 +59,7 @@ body{
     border: none;
     outline: none;
     color: #090909;
-    background: inherit;
+    background-color: inherit;
     margin: 0;
     padding: 14px 16px;
     border-bottom-color:#dee5e5;
@@ -75,6 +79,14 @@ body{
     z-index: 1;
 }
 
+.dropdown-content a{
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
 .dropdown-content a:hover{
     border-bottom-color:#BB2D3B;
     border-bottom-style: solid;
@@ -82,6 +94,37 @@ body{
 
 .dropdown:hover .dropdown-content{
     display: block;
+}
+
+@media screen and (max-width: 600px){
+    .navlinks a:not(:first-child), .dropdown .dropbtn{
+        display: none;
+    }
+    .navlinks a.icon{
+        float:right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .navlinks.responsive {position: relative;}
+    .navlinks.responsive a.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navlinks.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .navlinks.responsive .dropdown{float: none;}
+    .navlinks.responsive .dropdown-content{position: relative;}
+    .navlinks.responsive .dropdown .dropbtn{
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
 }
 
 .title-screen{
