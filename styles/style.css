@@ -170,7 +170,7 @@ body{
     padding-bottom: 10px;
 }
 
-#robochair, #exollent{
+#robochair, #exollent, #ai-ml{
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -183,14 +183,14 @@ body{
 
 .grow{
     transition: 1s ease;
-    }
+}
     
-    .grow:hover{
+.grow:hover{
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
     transition: 1s ease;
-    }
+}
 
 .product-content{
     display: flex;

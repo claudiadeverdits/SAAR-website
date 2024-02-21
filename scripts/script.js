@@ -7,3 +7,7 @@ function responsiveNav(){
         x.className = "navlinks";
     }
 }
+
+var menu = document.getElementById('responsive');
+
+menu.addEventListener('click', responsiveNav, false);
