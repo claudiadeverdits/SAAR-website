@@ -1,13 +1,10 @@
-function responsiveNav(){
-    var x = document.getElementById("navBar");
-    if (x.className === "navlinks"){
-        x.className += " responsive";
-    }
-    else{
-        x.className = "navlinks";
-    }
-}
-
-var menu = document.getElementById('responsive');
-
-menu.addEventListener('click', responsiveNav, false);
+$(document).ready(function(){
+    $('#responsive').click(function(){
+        var x = $('#navBar');
+        if (x.hasClass('navlinks')){
+            x.addClass('responsive');
+        } else {
+            x.removeClass('responsive');
+        }
+    });
+});

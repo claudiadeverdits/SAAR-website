@@ -181,6 +181,17 @@ body{
     padding: 20px;
 }
 
+#ai-img{
+    float: left;
+    width:50%;
+    margin-right: 15px;
+}
+
+.content{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
 .grow{
     transition: 1s ease;
 }
@@ -207,5 +218,9 @@ body{
     #robochair, #exollent{
         width: 80%;
         margin-bottom: 20px;
+    }
+    #ai-img{
+        float: none;
+        width: 80%;
     }
 }

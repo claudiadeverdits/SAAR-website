@@ -14,25 +14,22 @@ var exollent = new Product("Exollent", exollent_desc, 'images/ExollentConcept.pn
 var products = [roboChair, exollent];
 
 function populateProduct(products){
-    for(var i = 0; i < products.length; i++){
-        var image = document.createElement("img");
-        image.src = products[i].image;
-        image.setAttribute("alt", "Product image");
-        image.setAttribute("class", "prod-img");
-        document.getElementById(products[i].id).appendChild(image);
-
-        var heading = document.createElement("h2");
-        var node = document.createTextNode(products[i].name);
-        heading.appendChild(node);
-
-        document.getElementById(products[i].id).appendChild(heading);
-
-        var para = document.createElement("p");
-        var node = document.createTextNode(products[i].description);
-        para.appendChild(node);
-
-        document.getElementById(products[i].id).appendChild(para);
-    }
+    $.each(products, function(index, product) {
+        var $container = $('#' + product.id);
+        
+        var $image = $('<img>', {
+            src: product.image,
+            alt: 'Product image',
+            class: 'prod-img'
+        });
+        $container.append($image);
+        
+        var $heading = $('<h2>').text(product.name);
+        $container.append($heading);
+        
+        var $para = $('<p>').text(product.description);
+        $container.append($para);
+    });
 }
 
 populateProduct(products);
